@@ -1,0 +1,10 @@
+__pycache__
+data/all_entity.txt
+data/attr_mapping.txt
+data/crawl.json
+data/data.json
+data/data.nq
+data/data.db
+data/data_val.txt
+data/downloads/
+data/entity_mapping.txt
