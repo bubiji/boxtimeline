@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+  y="0px" viewBox="0 0 109 31" style="enable-background:new 0 0 109 31;" xml:space="preserve">
+  <style type="text/css">
+    .st0 {
+      fill: url(#path-2_2_);
+    }
+
+    .st1 {
+      opacity: 0.2;
+    }
+
+    .st2 {
+      fill: url(#path-4_2_);
+      fill-opacity: 0.16;
+    }
+
+    .st3 {
+      fill: #FFFFFF;
+    }
+
+    .st4 {
+      font-family: 'PingFangSC-Medium-GBpc-EUC-H';
+    }
+
+    .st5 {
+      font-size: 12px;
+    }
+  </style>
+  <g id="_x31_.1-首页">
+    <g id="比特币10年横屏" transform="translate(-466.000000, -4.000000)">
+      <g id="分组" transform="translate(489.000000, 20.000000)">
+        <g id="矩形">
+          <g>
+            <path id="path-2"
+              d="M-7.5-16h78C79.1-16,86-9.1,86-0.5S79.1,15,70.5,15h-78C-16.1,15-23,8.1-23-0.5S-16.1-16-7.5-16z" />
+          </g>
+          <g>
+
+            <linearGradient id="path-2_2_" gradientUnits="userSpaceOnUse" x1="-385.8532" y1="288.2354" x2="-384.8532"
+              y2="288.1545" gradientTransform="matrix(109 0 0 -31 42035 8933.5439)">
+              <stop offset="0" style="stop-color:#FF7456" />
+              <stop offset="1" style="stop-color:#F56A00" />
+            </linearGradient>
+            <path id="path-2_1_" class="st0" d="M-7.5-16h78C79.1-16,86-9.1,86-0.5S79.1,15,70.5,15h-78C-16.1,15-23,8.1-23-0.5
+						S-16.1-16-7.5-16z" />
+          </g>
+        </g>
+        <g id="合并形状" class="st1">
+          <g>
+            <path id="path-4" d="M86-0.5C86,8.1,79.1,15,70.5,15h-78C-16.1,15-23,8.1-23-0.5c0-0.5,0-1,0.1-1.5c0.8,7.9,7.4,14,15.4,14l0,0
+						h78c8.1,0,14.7-6.1,15.4-14C86-1.5,86-1,86-0.5z" />
+          </g>
+          <g>
+            <linearGradient id="path-4_2_" gradientUnits="userSpaceOnUse" x1="-23" y1="6.4998" x2="86" y2="6.4998">
+              <stop offset="0" style="stop-color:#FF7456" />
+              <stop offset="1" style="stop-color:#F56A00" />
+            </linearGradient>
+            <path id="path-4_1_" class="st2" d="M86-0.5C86,8.1,79.1,15,70.5,15h-78C-16.1,15-23,8.1-23-0.5c0-0.5,0-1,0.1-1.5
+						c0.8,7.9,7.4,14,15.4,14l0,0h78c8.1,0,14.7-6.1,15.4-14C86-1.5,86-1,86-0.5z" />
+          </g>
+        </g>
+        <text transform="matrix(1 0 0 1 -4.6512 1.8139)" class="st3 st4 st5">点击领取福利</text>
+      </g>
+    </g>
+  </g>
+</svg>
