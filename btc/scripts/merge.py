@@ -7,7 +7,7 @@ def load_hists():
         data = json.load(f)
         for hist in data:
             date = datetime.fromtimestamp(hist['time'])
-            hist['incidents'] = []
+            # hist['incidents'] = []
             hists[date.strftime('%Y-%m-%d')] = hist
     return hists
 
@@ -16,6 +16,8 @@ def load_data():
     with open('data.txt', 'r') as f:
         for line in f.readlines():
             line = line.split(',')
+            if len(line) < 2:
+                continue
             date = line[0].strip().split('.')
             if len(date[1]) == 1:
                 date[1] = '0' + date[1]
@@ -25,27 +27,49 @@ def load_data():
             data['{}-{}-{}'.format(date[0], date[1], date[2])] = line[1].strip()
     return data
 
-def gen_incidents(title):
+def gen_incidents(title, idx):
+    offset = offsets[idx % offsetLen]
     return [{
-           "bullish": True,
+           "bullish": offset < 50,
            "comment": title,
            "great": True,
-           "hoffset_h5":-150,
-           "hoffset_pc":-150,
+           "hoffset_h5": 0,
+           "hoffset_pc": 0,
            "inchart_h5": True,
            "inchart_pc": True,
            "incident": title,
            "link": "",
-           "offset_h5": 0,
-           "offset_pc": 0
+           "offset_h5": offset,
+           "offset_pc": offset
     }]
+
+offsets = [
+  100,
+  # 75,
+  # 50,
+  # 25,
+  0,
+  -15
+  -30,
+]
+
+offsetLen = len(offsets)
 
 def main():
     data = load_data()
     prices = load_hists()
+    idx = 0
     for key, val in data.items():
         try:
-            prices[key]['incidents'] = gen_incidents(val)
+            if len(prices[key]['incidents']) > 0:
+                prices[key]['incidents'][0]['comment'] = val
+                prices[key]['incidents'][0]['incident'] = val
+                prices[key]['incidents'][0]['link'] = ''
+                prices[key]['incidents'][0]['hoffset_h5'] = 0
+                prices[key]['incidents'][0]['hoffset_pc'] = 0
+            else:
+                prices[key]['incidents'] = gen_incidents(val, idx)
+                idx += 1
         except Exception as e:
             print(e)
 
@@ -56,8 +80,9 @@ def main():
         return price['time'] > start_timestamp
 
     prices = list(filter(filter_func, prices))
-    with open('../api/w1/btc_10years', 'w') as f:
-        json.dump(prices, f, indent=2)
+    # with open('../api/w1/btc_10years', 'w') as f:
+    with open('btc_10years', 'w') as f:
+        json.dump(prices, f, indent=2, ensure_ascii=False)
 
 
 main()
