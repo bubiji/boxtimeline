@@ -459,7 +459,7 @@
               e = "annotation-" + ("" + Math.random()).substring(2, 10),
               n = t.append("foreignObject").attr("y", (function(t) {
                 return 100 === t.offset_h5 ? 139 : -46 + (t.offset_h5 || 0)
-              })).attr("x", -9).attr("height", 42);
+              })).attr("x", -9).attr("height", 16);
               n.append("xhtml:div").attr("id", e).attr("class", (function(t) {
                 return "annotation-text " + (t.bullish ? "annotation-text--up": "annotation-text--down")
               })).text((function(t) {
@@ -470,7 +470,7 @@
               i = a.height,
               c = a.width;
               c = Math.max(i, c),
-              n.attr("width", c),
+              n.attr("width", c - 100),
               t.attr("transform", (function(t) {
                 return "translate(".concat( - c / 2 - (t.hoffset_h5 || 0), ", 0)")
               }))
