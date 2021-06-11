@@ -458,8 +458,8 @@
               var t = s.s(this).append("g"),
               e = "annotation-" + ("" + Math.random()).substring(2, 10),
               n = t.append("foreignObject").attr("y", (function(t) {
-                return 100 === t.offset_h5 ? 139 : -46 + (t.offset_h5 || 0)
-              })).attr("x", -9).attr("height", 16);
+                return 100 <= t.offset_h5 ? (t.offset_h5 || 0) : -30 + (t.offset_h5 || 0)
+              })).attr("x", -9).attr("height", 24);
               n.append("xhtml:div").attr("id", e).attr("class", (function(t) {
                 return "annotation-text " + (t.bullish ? "annotation-text--up": "annotation-text--down")
               })).text((function(t) {
@@ -470,27 +470,27 @@
               i = a.height,
               c = a.width;
               c = Math.max(i, c),
-              n.attr("width", c - 100),
+              n.attr("width", c),
               t.attr("transform", (function(t) {
                 return "translate(".concat( - c / 2 - (t.hoffset_h5 || 0), ", 0)")
               }))
             })).call((function(t) {
               var r = t.append("g");
               r.append("circle").attr("cx", "0").attr("cy", (function(t) {
-                return 100 === t.offset_h5 ? 139 : (t.offset_h5 || 0) - 5
-              })).attr("r", "8").attr("fill", (function(t) {
+                return 100 <= t.offset_h5 ? (t.offset_h5 || 0) : (t.offset_h5 || 0) - 5
+              })).attr("r", "6").attr("fill", (function(t) {
                 return t.bullish ? "rgba(40, 173, 98, 0.4)": "rgba(255, 74, 74, 0.4)"
               })),
               r.append("line").attr("x1", "0").attr("y1", (function(t) {
-                return 100 === t.offset_h5 ? 143 : (t.offset_h5 || 0) - 5
+                return 100 <= t.offset_h5 ? 4 + (t.offset_h5 || 0) : (t.offset_h5 || 0) - 5
               })).attr("x2", "0.001").attr("y2", (function(t) {
                 return e(t.value)
               })).attr("stroke-width", "2").attr("stroke", (function(t) {
-                return t.bullish ? 100 === t.offset_h5 ? "url(#linearGradientGrowReverse-1)": "url(#linearGradientGrow-1)": 100 === t.offset_h5 ? "url(#linearGradientDownReverse-1)": "url(#linearGradientDown-1)"
+                return t.bullish ? 100 <= t.offset_h5 ? "url(#linearGradientGrowReverse-1)": "url(#linearGradientGrow-1)": 100 <= t.offset_h5 ? "url(#linearGradientDownReverse-1)": "url(#linearGradientDown-1)"
               })),
               r.append("circle").attr("cx", "0").attr("cy", (function(t) {
-                return 100 === t.offset_h5 ? 139 : (t.offset_h5 || 0) - 5
-              })).attr("r", "4").attr("stroke-width", "2").attr("stroke", "#FFF").attr("fill", (function(t) {
+                return 100 <= t.offset_h5 ? (t.offset_h5 || 0) : (t.offset_h5 || 0) - 5
+              })).attr("r", "3").attr("stroke-width", "2").attr("stroke", "#FFF").attr("fill", (function(t) {
                 return t.bullish ? "rgba(40, 173, 98, 1)": "rgba(255, 74, 74, 1)"
               }))
             })).call((function(t) {

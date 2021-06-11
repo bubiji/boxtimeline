@@ -7,7 +7,7 @@ def load_hists():
         data = json.load(f)
         for hist in data:
             date = datetime.fromtimestamp(hist['time'])
-            # hist['incidents'] = []
+            hist['incidents'] = []
             hists[date.strftime('%Y-%m-%d')] = hist
     return hists
 
@@ -44,13 +44,15 @@ def gen_incidents(title, idx):
     }]
 
 offsets = [
-  100,
+  150, 
+  125,
   # 75,
   # 50,
   # 25,
   0,
-  -15
-  -30,
+  # -10,
+  -25,
+  -50,
 ]
 
 offsetLen = len(offsets)
@@ -80,8 +82,8 @@ def main():
         return price['time'] > start_timestamp
 
     prices = list(filter(filter_func, prices))
-    # with open('../api/w1/btc_10years', 'w') as f:
-    with open('btc_10years', 'w') as f:
+    with open('../api/w1/btc_10years', 'w') as f:
+    # with open('btc_10years', 'w') as f:
         json.dump(prices, f, indent=2, ensure_ascii=False)
 
 
