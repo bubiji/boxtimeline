@@ -458,8 +458,8 @@
               var t = s.s(this).append("g"),
               e = "annotation-" + ("" + Math.random()).substring(2, 10),
               n = t.append("foreignObject").attr("y", (function(t) {
-                return 100 <= t.offset_h5 ? (t.offset_h5 || 0) : -30 + (t.offset_h5 || 0)
-              })).attr("x", -9).attr("height", 24);
+                return 100 <= t.offset_h5 ? (t.offset_h5 || 0) : -20 + (t.offset_h5 || 0)
+              })).attr("x", -9).attr("height", 16);
               n.append("xhtml:div").attr("id", e).attr("class", (function(t) {
                 return "annotation-text " + (t.bullish ? "annotation-text--up": "annotation-text--down")
               })).text((function(t) {
@@ -478,7 +478,7 @@
               var r = t.append("g");
               r.append("circle").attr("cx", "0").attr("cy", (function(t) {
                 return 100 <= t.offset_h5 ? (t.offset_h5 || 0) : (t.offset_h5 || 0) - 5
-              })).attr("r", "6").attr("fill", (function(t) {
+              })).attr("r", "4").attr("fill", (function(t) {
                 return t.bullish ? "rgba(40, 173, 98, 0.4)": "rgba(255, 74, 74, 0.4)"
               })),
               r.append("line").attr("x1", "0").attr("y1", (function(t) {
@@ -490,7 +490,7 @@
               })),
               r.append("circle").attr("cx", "0").attr("cy", (function(t) {
                 return 100 <= t.offset_h5 ? (t.offset_h5 || 0) : (t.offset_h5 || 0) - 5
-              })).attr("r", "3").attr("stroke-width", "2").attr("stroke", "#FFF").attr("fill", (function(t) {
+              })).attr("r", "2").attr("stroke-width", "2").attr("stroke", "#FFF").attr("fill", (function(t) {
                 return t.bullish ? "rgba(40, 173, 98, 1)": "rgba(255, 74, 74, 1)"
               }))
             })).call((function(t) {

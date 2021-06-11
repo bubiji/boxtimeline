@@ -44,15 +44,15 @@ def gen_incidents(title, idx):
     }]
 
 offsets = [
-  150, 
-  125,
-  # 75,
-  # 50,
-  # 25,
+  165,
+  148, 
+  130,
+  18,
   0,
-  # -10,
-  -25,
-  -50,
+  -18,
+  -36,
+  -54,
+  -72,
 ]
 
 offsetLen = len(offsets)

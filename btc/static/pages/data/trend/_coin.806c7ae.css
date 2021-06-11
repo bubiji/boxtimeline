@@ -2,11 +2,11 @@
 
 .annotation-text {
     padding: 0;
-    line-height: 24px;
-    height: 24px;
-    font-size: 8pt;
+    line-height: 16px;
+    height: 16px;
+    font-size: 6pt;
 }
 
 #text-ruler {
-    font-size: 8pt;
+    font-size: 6pt;
 }
