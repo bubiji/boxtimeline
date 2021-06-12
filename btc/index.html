@@ -183,14 +183,54 @@
     width: 110px;
     height: 36px;
 }
+
+.spectitle {
+  position: fixed;
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.spectitle-inner {
+  margin-top: 10px;
+  width: 50vw;
+  height: 100vw;
+  font-size: 10pt;
+}
+
+@media screen and (max-width: 845px) {
+  .spectitle {
+    align-items: center;
+  }
+  
+  .spectitle-inner {
+    transform: rotate(90deg);
+    width: 50vh;
+    position: absolute;
+    backgroud: #ccc;
+    height: 100vw;
+  }
+}
+
 </style>
 </head>
 
   <body>
-
-    <div id="__nuxt">
-<!---->
-</div>
+	  <div class="spectitle"> 
+		  <div class="spectitle-inner">
+			  <div class="text">
+			  定投人生课堂成立近3年，300+节即时教授课程陪伴式教学,
+			  让标的价格的波动，从恐慌变为营养，
+			  年费仅2525元的投资教练，让你快速迭代成长为合格投资者
+			  </div>
+		  </div>
+		  </div>
+    <div id="__nuxt"> </div>
 <script> 
 window.__NUXT__ = {
    "layout":"default",
