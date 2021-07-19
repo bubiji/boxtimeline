@@ -187,7 +187,7 @@
 .spectitle {
   position: fixed;
   z-index: 1000;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   display: flex;
   top: 0;
@@ -199,20 +199,46 @@
 .spectitle-inner {
   margin-top: 10px;
   width: 50vw;
-  height: 100vw;
+  height: 100vh;
   font-size: 10pt;
 }
 
+.beian {
+  position: fixed;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.beian-inner {
+  margin-top: 10px;
+  width: 150px;
+  height: 100vh;
+  font-size: 10pt;
+  text-align: center;
+  position: relative;
+}
+
+.beian-inner a {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  left: 0;
+}
+
 @media screen and (max-width: 845px) {
-  .spectitle {
-    align-items: center;
-  }
-  
   .spectitle-inner {
     transform: rotate(90deg);
     width: 50vh;
-    position: absolute;
-    backgroud: #ccc;
+    height: 100vw;
+  }
+  .beian-inner {
+    transform: rotate(90deg);
     height: 100vw;
   }
 }
@@ -228,6 +254,11 @@
 			  让标的价格的波动，从恐慌变为营养，
 			  年费仅2525元的投资教练，让你快速迭代成长为合格投资者
 			  </div>
+		  </div>
+		  </div>
+		  <div class='beian'>
+		  <div class="beian-inner">
+			  <a href="https://beian.miit.gov.cn/">闽ICP备16019358号-2</a>
 		  </div>
 		  </div>
     <div id="__nuxt"> </div>
