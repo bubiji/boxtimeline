@@ -1,5 +1,0 @@
-sanic
-requests
-jieba
-pyahocorasick
-sanic-cors
