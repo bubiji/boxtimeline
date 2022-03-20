@@ -1,9 +1,0 @@
-homepage 首页
-repo 项目地址
-language 语言 编程语言
-description 功能 简介
-default_branch 默认分支
-version 版本
-download_url 下载地址
-main_language 主要语言
-code 代码行数
