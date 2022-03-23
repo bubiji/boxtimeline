@@ -13,7 +13,7 @@ def load_hists():
 
 def load_data():
     data = {}
-    with open('data.txt', 'r') as f:
+    with open('data2022.txt', 'r') as f:
         for line in f.readlines():
             line = line.split(',')
             if len(line) < 2:
