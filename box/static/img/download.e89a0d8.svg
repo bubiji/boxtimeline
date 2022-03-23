@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="44px" viewBox="0 0 100 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>分组</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="44.4444444%" x2="100%" y2="55.5555556%" id="linearGradient-1">
+            <stop stop-color="#FF7456" offset="0%"></stop>
+            <stop stop-color="#F56A00" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="84" height="28" rx="14"></rect>
+        <filter x="-16.1%" y="-37.5%" width="132.1%" height="196.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.964705882   0 0 0 0 0.419607843   0 0 0 0 0.0274509804  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M83.9205847,12.5 C83.9730774,12.9928103 84,13.4932611 84,14 C84,21.7319865 77.7319865,28 70,28 L14,28 C6.2680135,28 -2.60581843e-15,21.7319865 -3.55271368e-15,14 C-3.38193357e-15,13.4932611 0.0269225506,12.9928103 0.0794153112,12.5 C0.827874152,19.52665 6.77475238,25 14,25 L70,25 C77.2252476,25 83.1721258,19.52665 83.9205847,12.5 Z" id="path-4"></path>
+        <filter x="-16.1%" y="-67.7%" width="132.1%" height="274.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.964705882   0 0 0 0 0.419607843   0 0 0 0 0.0274509804  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="news" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="市值前十走势H5" transform="translate(-511.000000, -18.000000)">
+            <g id="分组" transform="translate(519.000000, 23.000000)">
+                <g id="矩形" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                </g>
+                <g id="合并形状" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    <use fill-opacity="0.16" fill="#000000" xlink:href="#path-4"></use>
+                </g>
+                <text id="APP下载" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" line-spacing="12" fill="#FFFFFF">
+                    <tspan x="16" y="21" dy="-3">APP下载</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
