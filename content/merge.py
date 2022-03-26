@@ -1,19 +1,44 @@
 from datetime import datetime, timedelta
 import json
 
-def load_hists():
+def to_num(v):
+    return float(v[1:].replace(',', ''))
+
+def to_ts(s):
+    return int(datetime.strptime(s, '%Y-%m-%d').timestamp())
+
+def load_hists(n):
     hists = {}
-    with open('btc_10years_orig', 'r') as f:
-        data = json.load(f)
-        for hist in data:
-            date = datetime.fromtimestamp(hist['time'])
-            hist['incidents'] = []
-            hists[date.strftime('%Y-%m-%d')] = hist
+    with open('box_price_history.txt', 'r') as f:
+        line = f.readline().strip()
+        header = line.split('\t')
+
+        for line in f:
+            line = line.strip().split('\t')
+
+            data = dict(zip(header, line))
+            date = data.pop('Date')
+
+            for k, v in data.items():
+                name = k.split(' ')[0].lower()
+                price = to_num(v)
+                if name == n:
+                    hist = {
+                        'price': price,
+                        'rate': 0,
+                        'time': to_ts(date),
+                        'incidents': []
+                    }
+
+                    hists[date] = hist
+                    print(price, date)
+
     return hists
+
 
 def load_data():
     data = {}
-    with open('data2022.txt', 'r') as f:
+    with open('data_date_classname_select', 'r') as f:
         for line in f.readlines():
             line = line.split(',')
             if len(line) < 2:
@@ -57,9 +82,9 @@ offsets = [
 
 offsetLen = len(offsets)
 
-def main():
+def main(script, name='box'):
     data = load_data()
-    prices = load_hists()
+    prices = load_hists(name)
     idx = 0
     for key, val in data.items():
         try:
@@ -76,15 +101,10 @@ def main():
             print(e)
 
     prices = list(prices.values())
-
-    start_timestamp = datetime(2019, 6, 28).timestamp()
-    def filter_func(price):
-        return price['time'] > start_timestamp
-
-    prices = list(filter(filter_func, prices))
-    with open('../api/w1/btc_10years', 'w') as f:
-    # with open('btc_10years', 'w') as f:
+    with open(f'{name}_hists', 'w') as f:
         json.dump(prices, f, indent=2, ensure_ascii=False)
 
 
-main()
+if __name__ == '__main__':
+    import sys
+    main(*sys.argv)

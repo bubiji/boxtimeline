@@ -668,7 +668,7 @@
               r = t.error,
               n = t.app,
               e.next = 3,
-              n.$api.get("/api/w1/btc_10years").
+              n.$api.get("/btc_hists").
               catch((function(t) {
                 return r({
                   statusCode: t.code,
