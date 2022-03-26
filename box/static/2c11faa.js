@@ -300,7 +300,7 @@
       },
       computed: {
         coin: function() {
-          return "btc"
+          return "box"
         },
         partionData: function() {
           var t = this.rawCurrent;
@@ -594,7 +594,7 @@
       [t._v(" "), n("h3", {
         staticClass: "trend-desc__time"
       },
-      [n("span", [t._v("BTC")]), t._v("\n      " + t._s(t.currentTime) + "\n    ")]), t._v(" "), n("Tool")], 1), t._v(" "), n("div", {
+      [n("span", [t._v("BOX")]), t._v("\n      " + t._s(t.currentTime) + "\n    ")]), t._v(" "), n("Tool")], 1), t._v(" "), n("div", {
         staticClass: "chart-container--outer"
       },
       [n("div", {
@@ -668,7 +668,7 @@
               r = t.error,
               n = t.app,
               e.next = 3,
-              n.$api.get("/api/w1/btc_10years").
+              n.$api.get("/box_hists").
               catch((function(t) {
                 return r({
                   statusCode: t.code,
@@ -689,7 +689,7 @@
       },
       computed: {
         coin: function() {
-          return "btc"
+          return "box"
         },
         prices: function() {
           return this.resData.slice().map((function(t) {
@@ -730,7 +730,7 @@
       },
       head: function() {
         return {
-          title: "BTC",
+          title: "BOX",
           meta: [{
             hid: "description",
             name: "description",
